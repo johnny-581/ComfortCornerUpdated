@@ -1,0 +1,22 @@
+{
+  "name": "comfort_corner",
+  "version": "1.0.0",
+  "description": "memtal health resource hub with a motivational phrase",
+  "main": "src/js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnny-581/ComfortCornerUpdated.git"
+  },
+  "author": "Jiayang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnny-581/ComfortCornerUpdated/issues"
+  },
+  "homepage": "https://github.com/johnny-581/ComfortCornerUpdated#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
