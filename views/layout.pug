@@ -4,8 +4,30 @@ html(lang='en')
     title= title
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap', rel='stylesheet')
     link(rel='stylesheet', href='/stylesheets/style.css')
     script(src="/js/main.js")
   body
-    #quote
-      p quote
+    header
+      nav
+        .container
+          h1.comfort-corner Comfort Corner
+          a(href="#") Talk to Comfort Bot
+
+    main
+      .quote-container
+        .quote-text quote text
+
+      .cards-container
+        .card
+          img(src="/images/sleep.png", alt="Sleep Better")
+          h2 Sleep Better
+        .card
+          img(src="/images/anxiety.png", alt="Manage Anxiety")
+          h2 Manage Anxiety
+        .card
+          img(src="/images/stress.png", alt="Cope with Stress")
+          h2 Cope with Stress
+
+    footer
+      p © 2024 Comfort Corner

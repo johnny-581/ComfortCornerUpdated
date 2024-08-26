@@ -5,7 +5,7 @@ async function updateQuote() {
         const data = await response.json();
         console.log(data);
 
-        const phraseElement = document.getElementById('quote');
+        const phraseElement = document.querySelector('.quote-text');
         phraseElement.textContent = data;
 
     } catch (error) {
