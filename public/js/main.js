@@ -1,11 +1,11 @@
-async function updatePhrase() {
+async function updateQuote() {
     try {
         const response = await fetch('/api');
         console.log(response);
         const data = await response.json();
         console.log(data);
 
-        const phraseElement = document.getElementById('phrase');
+        const phraseElement = document.getElementById('quote');
         phraseElement.textContent = data;
 
     } catch (error) {
@@ -13,6 +13,6 @@ async function updatePhrase() {
     }
 }
 
-window.onload = updatePhrase;
+window.onload = updateQuote;
 
 // setInterval(updatePhrase, 3000);
