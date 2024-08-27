@@ -26,6 +26,7 @@ async function generateQuote() {
     try {
         const completion = await openai.chat.completions.create({
             model: "gpt-4o-mini",
+            temperature: 1.5,
             messages: [
                 {
                     role: "system",

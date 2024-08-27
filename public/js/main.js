@@ -1,13 +1,18 @@
+const ANIMATION_DURATION = 1000;
+const QUOTE_UPDATE_FREQUENCY = 12000;
+
 async function updateQuote() {
     try {
+        const quoteElement = document.querySelector('.quote-text');
+        quoteElement.style.animationName = 'fadeOutDown';
+
         const response = await fetch('/api');
-        console.log(response);
         const data = await response.json();
-        console.log(data);
 
-        const phraseElement = document.querySelector('.quote-text');
-        phraseElement.textContent = data;
-
+        setTimeout(() => {
+            quoteElement.textContent = data;
+            quoteElement.style.animationName = 'fadeInUp';
+        }, ANIMATION_DURATION);
     } catch (error) {
         console.error('Error fetching the phrase', error);
     }
@@ -15,4 +20,4 @@ async function updateQuote() {
 
 window.onload = updateQuote;
 
-// setInterval(updatePhrase, 3000);
+setInterval(updateQuote, QUOTE_UPDATE_FREQUENCY);
