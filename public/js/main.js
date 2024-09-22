@@ -20,4 +20,4 @@ async function updateQuote() {
 
 window.onload = updateQuote;
 
-setInterval(updateQuote, QUOTE_UPDATE_FREQUENCY);
+// setInterval(updateQuote, QUOTE_UPDATE_FREQUENCY);

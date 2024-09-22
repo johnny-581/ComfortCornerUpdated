@@ -18,11 +18,22 @@ const exampleQuotes = [
     "###Embrace the glorious mess that you are.###",
     "###Bloom where you are planted.###"
 ];
-const joinedQuotes = exampleQuotes.join("\n");
-const systemPromptWithJoinedQuotes = systemPrompt.concat(joinedQuotes);
-console.log(systemPromptWithJoinedQuotes);
+
+// Fisher-Yates shuffle
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
 
 async function generateQuote() {
+    shuffle(exampleQuotes);
+    const selectedQuotes = exampleQuotes.slice(0, 5);
+    const joinedQuotes = selectedQuotes.join("\n");
+    const systemPromptWithJoinedQuotes = systemPrompt.concat(joinedQuotes);
+    // console.log(systemPromptWithJoinedQuotes);
+
     try {
         const completion = await openai.chat.completions.create({
             model: "gpt-4o-mini",
@@ -40,7 +51,7 @@ async function generateQuote() {
         });
 
         const phrase = completion.choices[0].message.content;
-        console.log(phrase);
+        // console.log(phrase);
         return phrase;
     } catch (error) {
         console.error('Error generating quote: ', error);
