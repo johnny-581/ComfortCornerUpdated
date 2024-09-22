@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node ./bin/www",
     "devstart": "nodemon ./bin/www",
-    "serverstart": "DEBUG=comfort-corner:* npm run devstart"
+    "serverstart": "DEBUG=comfort-corner:* npm run devstart",
+    "scss": "sass --watch sass:public/stylesheets"
   },
   "dependencies": {
     "cookie-parser": "^1.4.6",
@@ -14,8 +15,10 @@
     "express": "^4.19.2",
     "http-errors": "~2.0.0",
     "morgan": "^1.10.0",
+    "n": "^10.0.0",
     "openai": "^4.56.0",
-    "pug": "3.0.3"
+    "pug": "3.0.3",
+    "sass": "^1.79.3"
   },
   "devDependencies": {
     "nodemon": "^3.1.4"

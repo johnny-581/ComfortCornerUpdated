@@ -1,5 +1,5 @@
 const ANIMATION_DURATION = 1000;
-const QUOTE_UPDATE_FREQUENCY = 12000;
+const QUOTE_UPDATE_FREQUENCY = 100000;
 
 async function updateQuote() {
     try {
