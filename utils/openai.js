@@ -37,7 +37,7 @@ async function generateQuote() {
     try {
         const completion = await openai.chat.completions.create({
             model: "gpt-4o-mini",
-            temperature: 1.5,
+            temperature: 1.4,
             messages: [
                 {
                     role: "system",
@@ -58,8 +58,6 @@ async function generateQuote() {
         throw new Error('Failed to generate quote');
     }
 }
-
-generateQuote();
 
 module.exports = generateQuote;
 

@@ -1,4 +1,4 @@
-const generateQuote = require('../utils/openai').default;
+const generateQuote = require('../utils/openai');
 
 exports.getQuote = async (req, res) => {
     try {
